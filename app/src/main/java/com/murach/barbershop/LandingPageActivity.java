@@ -14,6 +14,7 @@ public class LandingPageActivity extends AppCompatActivity {
 
     private Button makeApptBtn;
     private Button viewApptBtn;
+    private int unknown = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
