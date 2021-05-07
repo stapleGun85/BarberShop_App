@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343434">
+
+    <TextView
+        android:id="@+id/confirmationHeader"
+        android:layout_width="411dp"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:text="@string/appt_confirmation"
+        android:textColor="#C2B59B"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateConfirmation"
+        android:layout_width="280dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="#C2B59B"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmationHeader" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="175dp"
+        android:background="#985920"
+        android:text="@string/back"
+        android:textColor="#C2B59B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateConfirmation" />
+
+    <Button
+        android:id="@+id/bookBtn"
+        android:layout_width="151dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="175dp"
+        android:background="#985920"
+        android:text="@string/book_appt"
+        android:textColor="#C2B59B"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toBottomOf="@+id/dateConfirmation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

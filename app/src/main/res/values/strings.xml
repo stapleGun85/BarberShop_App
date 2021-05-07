@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Barbershop</string>
+    <string name="haircut">Haircut</string>
+    <string name="go_to_calendar">Go to Calendar</string>
+    <string name="color">Color</string>
+    <string name="style">Style</string>
+    <string name="log_in">Log In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="logo_desc">barbershop logo</string>
+    <string name="shave">Shave</string>
+    <string name="barbershop_name">barbershop name</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="confirm_appt">Confirm Appointment</string>
+    <string name="register_text">Click here to register</string>
+    <string name="create_account">Create an Account</string>
+    <string name="firstNameText">First Name</string>
+    <string name="lastNameText">Last Name</string>
+    <string name="register_account">Create Account</string>
+    <string name="login_text">Click here to login</string>
+    <string name="username_text">Username</string>
+    <string name="phone">Phone</string>
+    <string name="next">Next</string>
+    <string name="appt_confirmation">Appointment Details</string>
+    <string name="ok">OK</string>
+    <string name="go_home">Go Home</string>
+    <string name="back">Back</string>
+    <string name="book_appt">Book Appointment</string>
+    <string name="view_appts">View Appointments</string>
+    <string name="make_appt">Make Appointment</string>
+    <string name="appointments">appointments</string>
+
+    <string-array name="barber_array">
+        <item>Paul</item>
+        <item>Travis</item>
+        <item>Fernando</item>
+    </string-array>
+
+</resources>
