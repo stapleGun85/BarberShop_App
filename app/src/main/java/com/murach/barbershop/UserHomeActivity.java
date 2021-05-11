@@ -16,6 +16,7 @@ public class UserHomeActivity extends AppCompatActivity {
     private Button styleBtn;
     private Button shaveBtn;
     private Button colorBtn;
+    private Button backBtn;
     public static Boolean isHaircutClicked = false;
     public static Boolean isStyleClicked = false;
     public static Boolean isShaveClicked = false;
@@ -26,7 +27,6 @@ public class UserHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // sets layout to user home page
         setContentView(R.layout.user_home);
-        apptBtn = (Button) findViewById(R.id.apptBtn);
 
         haircutBtn = (Button) findViewById(R.id.haircutBtn);
         haircutBtn.setOnClickListener(new View.OnClickListener() {
@@ -81,10 +81,19 @@ public class UserHomeActivity extends AppCompatActivity {
             }
         });
 
+        apptBtn = (Button) findViewById(R.id.apptBtn);
         apptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openCalendar();
+            }
+        });
+
+        backBtn = (Button) findViewById(R.id.back_bt);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLandingPage();
             }
         });
     }
@@ -92,6 +101,12 @@ public class UserHomeActivity extends AppCompatActivity {
     // continues to calendar
     public void openCalendar() {
         Intent intent = new Intent(this, CalendarActivity.class);
+        startActivity(intent);
+    }
+
+    // back to landingPage
+    public void openLandingPage() {
+        Intent intent = new Intent(this, LandingPageActivity.class);
         startActivity(intent);
     }
 }

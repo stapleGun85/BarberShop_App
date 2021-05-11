@@ -14,7 +14,8 @@ public class LandingPageActivity extends AppCompatActivity {
 
     private Button makeApptBtn;
     private Button viewApptBtn;
-    private int unknown = 0;
+    private Button logOutApptBtn;
+    private Button settingAppBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class LandingPageActivity extends AppCompatActivity {
 
         addListenerOnMakeApptBtn();
         addListenerOnViewApptBtn();
+        addListenerOnSettingBtn(); //go to setting page
+        addListenerOnLogOutButton(); //log out and back to log in page
     }
 
     public void addListenerOnMakeApptBtn() {
@@ -43,7 +46,26 @@ public class LandingPageActivity extends AppCompatActivity {
                 openAppts();
             }
         });
+    }
 
+    public void addListenerOnSettingBtn() {
+        settingAppBtn = (Button) findViewById(R.id.SettingBtn);
+        settingAppBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSettingPage();
+            }
+        });
+    }
+
+    public void addListenerOnLogOutButton() {
+        logOutApptBtn = (Button) findViewById(R.id.LogOutBtn);
+        logOutApptBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logOut();
+            }
+        });
     }
 
     // continues to home page
@@ -57,4 +79,17 @@ public class LandingPageActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AppointmentsActivity.class);
         startActivity(intent);
     }
+
+    // go to setting page
+    public void openSettingPage() {
+        Intent intent = new Intent(this, SettingsPageActivity.class);
+        startActivity(intent);
+    }
+
+    // log out so return to log in page
+    public void logOut() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

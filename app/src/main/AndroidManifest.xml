@@ -15,6 +15,7 @@
         <activity android:name=".AppointmentsActivity" />
         <activity android:name=".ConfirmationActivity" />
         <activity android:name=".LandingPageActivity" />
+        <activity android:name=".SettingsPageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

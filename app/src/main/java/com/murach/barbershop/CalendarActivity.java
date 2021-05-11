@@ -24,6 +24,7 @@ public class CalendarActivity extends AppCompatActivity {
     private Button nextBtn;
     public static String date;
     public static String time;
+    public Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class CalendarActivity extends AppCompatActivity {
         calendarView = (CalendarView) findViewById(R.id.calendarView);
         dateTextView = (TextView) findViewById(R.id.dateTextView);
         timeTextView = (TextView) findViewById(R.id.timeTextView);
+        backButton = (Button) findViewById(R.id.BackBtn);
 
         // sets color of Month text
         ViewGroup vg = (ViewGroup) calendarView.getChildAt(0);
@@ -58,6 +60,12 @@ public class CalendarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openConfirmationPage();
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openUserHomePage();
             }
         });
     }
@@ -116,6 +124,12 @@ public class CalendarActivity extends AppCompatActivity {
     // continues to confirmation page
     public void openConfirmationPage() {
         Intent intent = new Intent(this, ConfirmationActivity.class);
+        startActivity(intent);
+    }
+
+    // goes back to appt options page
+    public void openUserHomePage() {
+        Intent intent = new Intent(this, UserHomeActivity.class);
         startActivity(intent);
     }
 }
